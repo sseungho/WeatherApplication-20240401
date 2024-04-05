@@ -20,7 +20,7 @@ class WeatherApp(QMainWindow, form_class):
         self.setWindowIcon(QIcon("img/weather_icon.png"))
         self.statusBar().showMessage("WEATHER SEARCH APP VER 1.1")
         self.setWindowFlags(Qt.WindowStaysOnTopHint)  # 윈도우를 항상 맨위로 유지
-        self.weather_search()  # 프로그램 실행시 자동으로 현재 위치 날씨 출력 
+        self.weather_search()  # 프로그램 실행시 자동으로 현재 위치 날씨 출력
 
         self.search_btn.clicked.connect(self.weather_search)
         self.search_btn.clicked.connect(self.reflashTimer)
@@ -155,11 +155,8 @@ class WeatherApp(QMainWindow, form_class):
             self.weather_img.setText(weatherText)
 
     def reflashTimer(self):  # 다시 크롤링을 해오는 타이머 함수
-        print(112)
         self.weather_search()  # 날씨 조회 함수 호출
-        print(114)
         threading.Timer(60, self.reflashTimer).start()
-        print(116)
 
 
 if __name__ == "__main__":

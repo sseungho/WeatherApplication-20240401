@@ -109,8 +109,11 @@ class WeatherApp(QMainWindow, form_class):
             self.weather_img.setText(weatherText)
 
     def reflashTimer(self):  # 다시 크롤링을 해오는 타이머 함수
+        print(112)
         self.weather_search()  # 날씨 조회 함수 호출
+        print(114)
         threading.Timer(60, self.reflashTimer).start()
+        print(116)
 
 
 

@@ -14,6 +14,8 @@ class WeatherApp(QMainWindow, form_class):
         super().__init__()
         self.setupUi(self)
         self.setWindowTitle("날씨 검색 프로그램")
+        self.setWindowIcon(QIcon("img/weather_icon.png"))
+        self.statusBar().showMessage("WEATHER SEARCH APP VER 0.5")
 
         self.search_btn.clicked.connect(self.weather_search)
 
@@ -65,7 +67,7 @@ class WeatherApp(QMainWindow, form_class):
         # print(64)
         # self.weather_img.setText(todayWeatherText)
         # print(66)
-        self.setWeatherImage(todayWeatherText)  # 날씨 이미지 출력 함수 호출        
+        self.setWeatherImage(todayWeatherText)  # 날씨 이미지 출력 함수 호출
         self.now_temper.setText(todayTempText)
         # print(68)
         self.yester_temper.setText(yesterdayTempText)

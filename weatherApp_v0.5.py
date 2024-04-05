@@ -62,12 +62,35 @@ class WeatherApp(QMainWindow, form_class):
         
         # 크롤링한 날씨정보 텍스트를 준비된 UI에 출력하기
         self.area_title.setText(areaText)
-        self.weather_img.setText(todayWeatherText)
+        # print(64)
+        # self.weather_img.setText(todayWeatherText)
+        # print(66)
+        self.setWeatherImage(todayWeatherText)  # 날씨 이미지 출력 함수 호출        
         self.now_temper.setText(todayTempText)
+        # print(68)
         self.yester_temper.setText(yesterdayTempText)
+        # print(70)
         self.sense_temper.setText(senseTempText)
+        # print(72)
         self.dust1_info.setText(dust1Info)
+        # print(74)
         self.dust2_info.setText(dust2Info)
+        # print(76)
+
+    def setWeatherImage(self, weatherText):  # 날씨에 따른 이미지 출력 함수
+        if weatherText == "맑음":
+            weatherImage = QPixmap("img/sun.png")  # 이미지 불러와서 저장하기
+            self.weather_img.setPixmap(QPixmap(weatherImage))
+            # ui에 준비된 label 이름에 이미지 출력하기
+        elif weatherText == "구름많음":
+            weatherImage = QPixmap("img/cloud.png")  # 이미지 불러와서 저장하기
+            self.weather_img.setPixmap(QPixmap(weatherImage))
+        else:
+            self.weather_img.setText(weatherText)
+
+
+
+
 
 
 if __name__ == "__main__":

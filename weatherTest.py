@@ -19,8 +19,10 @@ todayTempText = weatherSoup.find("div",{"class":"temperature_text"}).text  # 현
 todayTempText = todayTempText[6:12].strip()  # 6번째 글자부터 슬라이싱 후 양쪽 공백 제거
 print(f"현재온도 : {todayTempText}")
 
-yesterdayTempText = weatherSoup.find("span", {"class":"temperature up"}).text  #어제와의 날씨 비교
-yesterdayTempText.strip()
+# yesterdayTempText = weatherSoup.find("span", {"class":"temperature"}).text  #어제와의 날씨 비교
+# yesterdayTempText.strip()
+yesterdayTempText = weatherSoup.find("p", {"class":"summary"}).text  #어제와의 날씨 비교
+yesterdayTempText = yesterdayTempText[:15].strip()
 print(f"어제날씨비교 : {yesterdayTempText}")
 
 todayWeatherText = weatherSoup.find("span", {"class":"weather before_slash"}).text  # 오늘 날씨 텍스트

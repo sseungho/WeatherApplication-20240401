@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>17</x>
+      <y>10</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>지역 입력 :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="area_input">
+    <property name="geometry">
+     <rect>
+      <x>88</x>
+      <y>7</y>
+      <width>220</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:1px solid rgb(0, 170, 255);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="search_btn">
+    <property name="geometry">
+     <rect>
+      <x>311</x>
+      <y>6</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>날씨조회</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="area_title">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>49</y>
+      <width>361</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>함초롬돋움</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 144);</string>
+    </property>
+    <property name="text">
+     <string>날씨 조회 지역 이름</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="weather_img">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>104</y>
+      <width>110</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>날씨 이미지 위치</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="now_temper">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>112</y>
+      <width>170</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>35</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(68, 68, 68);</string>
+    </property>
+    <property name="text">
+     <string>00.0 ˚</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="yester_temper">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>208</y>
+      <width>261</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>맑은 고딕</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>어제와의 날씨 비교</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>260</y>
+      <width>70</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>맑은 고딕</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(53, 159, 78);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>체감온도</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sense_temper">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>294</y>
+      <width>70</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:1px solid rgb(25, 25, 25);</string>
+    </property>
+    <property name="text">
+     <string>00.0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>164</x>
+      <y>260</y>
+      <width>70</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>맑은 고딕</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(184, 76, 182);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>미세먼지</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dust1_info">
+    <property name="geometry">
+     <rect>
+      <x>164</x>
+      <y>294</y>
+      <width>70</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:1px solid rgb(25, 25, 25);</string>
+    </property>
+    <property name="text">
+     <string>좋음</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dust2_info">
+    <property name="geometry">
+     <rect>
+      <x>285</x>
+      <y>295</y>
+      <width>70</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:1px solid rgb(25, 25, 25);</string>
+    </property>
+    <property name="text">
+     <string>좋음</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>285</x>
+      <y>261</y>
+      <width>70</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>맑은 고딕</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(110, 110, 165);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>초미세먼지</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

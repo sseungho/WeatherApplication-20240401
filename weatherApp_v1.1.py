@@ -20,6 +20,7 @@ class WeatherApp(QMainWindow, form_class):
         self.setWindowIcon(QIcon("img/weather_icon.png"))
         self.statusBar().showMessage("WEATHER SEARCH APP VER 1.1")
         self.setWindowFlags(Qt.WindowStaysOnTopHint)  # 윈도우를 항상 맨위로 유지
+        self.weather_search()  # 프로그램 실행시 자동으로 현재 위치 날씨 출력 
 
         self.search_btn.clicked.connect(self.weather_search)
         self.search_btn.clicked.connect(self.reflashTimer)

@@ -94,7 +94,7 @@ class WeatherApp(QMainWindow, form_class):
                 todayTempText = todayTempText[5:]
                 # todayWeatherText = todayTempAllText[10:12].strip()  # 해외 도시 날씨 텍스트
                 todayWeatherText = weatherSoup.select("div.temperature_text>p.summary")[0].text
-                todayWeatherText = todayWeatherText[:3].strip()
+                # todayWeatherText = todayWeatherText[:3].strip()
                 self.setWeatherImage(todayWeatherText)  # 날씨 이미지 출력 함수 호출
                 # senseTempText = todayTempAllText[18:].strip()  # 해외 도시 체감 온도
                 senseTempText = weatherSoup.select("p.summary>span.text>em")[0].text
@@ -125,7 +125,13 @@ class WeatherApp(QMainWindow, form_class):
         elif weatherText == "구름많음":
             weatherImage = QPixmap("img/cloud.png")  # 이미지 불러와서 저장하기
             self.weather_img.setPixmap(QPixmap(weatherImage))
+        elif "화창" in weatherText:  # 화창이 포함된 날씨들은 모두 해 이미지가 출력
+            weatherImage = QPixmap("img/sun.png")  # 이미지 불러와서 저장하기
+            self.weather_img.setPixmap(QPixmap(weatherImage))
         elif weatherText == "흐림":
+            weatherImage = QPixmap("img/cloud.png")  # 이미지 불러와서 저장하기
+            self.weather_img.setPixmap(QPixmap(weatherImage))
+        elif "흐림" in weatherText:  # 흐림이 포함된 날씨는 모두 구름 이미지가 출력
             weatherImage = QPixmap("img/cloud.png")  # 이미지 불러와서 저장하기
             self.weather_img.setPixmap(QPixmap(weatherImage))
         elif weatherText == "비":

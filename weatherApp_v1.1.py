@@ -117,7 +117,7 @@ class WeatherApp(QMainWindow, form_class):
 
             except:
                 self.area_title.setText("입력 지역명 오류!!")
-                self.setWeatherImage("")  # 날씨 이미지 출력 함수 호출
+                self.setWeatherImage(" ")  # 날씨 이미지 출력 함수 호출(인수를 ""에서 " " 으로 변경)
                 self.now_temper.setText("")
                 self.yester_temper.setText(f"{inputArea} 지역은 존재하지 않습니다.")
                 self.sense_temper.setText("-")
